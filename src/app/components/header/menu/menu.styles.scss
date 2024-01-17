@@ -1,0 +1,43 @@
+.menu {
+  &-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 8px;
+
+    @include tablet {
+      display: none;
+    }
+
+    ul {
+      padding: 0;
+      display: flex;
+      list-style-type: none;
+      flex-wrap: nowrap;
+      height: 100%;
+    }
+
+    li {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+    }
+
+    a {
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.1s linear;
+      padding: 0 10px;
+      height: 100%;
+      display: block;
+      width: calc(100% - 20px);
+      line-height: 70px;
+
+      &:hover,
+      &:focus {
+        color: #9932cc;
+      }
+    }
+  }
+}

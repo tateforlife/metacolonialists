@@ -1,0 +1,141 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  padding: 150px 0 0;
+  margin: -100px 0 120px;
+
+  @include tablet {
+    padding: 120px 0 0;
+    margin: -70px 0 70px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    text-align: center;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 60px;
+    margin: 0 0 50px;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+      line-height: 32px;
+      margin: 20px 0 40px;
+    }
+  }
+
+
+  &__list {
+    margin: 0 auto;
+    max-width: 50%;
+    width: 100%;
+
+    @include tablet {
+      max-width: 75%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+
+    &-item {
+
+      
+      summary {
+        font-size: 22px;
+        line-height: 24px;
+        padding: 20px 40px 20px 20px;
+        position: relative;
+        text-transform: uppercase;
+
+        @include mobile {
+          padding: 20px 60px 20px 40px;
+        }
+
+        &:-webkit-direct-focus {
+          outline: none;
+        }
+        
+        &::marker {
+          content: '';
+        }
+
+        &::-webkit-details-marker {
+          display:none;
+        }
+
+        &::after {
+          transition: transform .2s ease;
+          content: " "; 
+          width: 0; 
+          height: 0; 
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid #AE39FF;
+          position: absolute;
+          right: 20px;
+          top: 22px;
+
+          @include mobile {
+            right: 30px;
+          }
+        }
+      }
+
+      &[open] {
+        summary {
+          &::after { 
+            content: " "; 
+            width: 0; 
+            height: 0; 
+            position: absolute;
+            right: 20px;
+            top: 25px;
+            transform: rotate(90deg);
+
+            @include mobile {
+              right: 30px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+
+      background: black;
+
+      &-paragraph {
+        font-size: 18px;
+        line-height: 25px;
+        padding: 0 20px 20px;
+        margin: 0;
+        cursor: auto;
+
+        @include mobile {
+          padding: 0 30px 20px;
+        }
+
+        span {
+          font-weight: 800;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.social {
+  &-wrapper {
+    height: max-content;
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 140px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-icon {
+    background: transparent;
+    border: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+
+    svg {
+      width: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: rotateY(360deg);
+        transition: .5s;
+      }
+    }
+
+    &--discord {
+      &:hover,
+      &:focus {
+        path {
+          fill: #5865F2;
+        }
+      }
+    }
+
+    &--twitter {
+      &:hover,
+      &:focus {
+        path {
+          fill: #1DA1F2;
+        }
+      }
+    }
+
+    &--instagram {
+      &:hover,
+      &:focus {
+        path {
+          fill: #C13584;
+        }
+      }
+    }
+
+    &--opensea {
+      path {
+        fill: white;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #C13584;
+        }
+      }
+    }
+  }
+}

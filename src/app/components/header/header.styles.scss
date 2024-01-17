@@ -1,0 +1,36 @@
+.header {
+  background-color: #1d1d1d;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    width: calc(100% - 60px);
+    padding: 24px 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1260px;
+
+    @include tablet {
+      z-index: 20;
+      margin: 0;
+      padding: 0;
+      height: 110px;
+      width: 100%;
+      justify-content: flex-end;
+
+      .logo-wrapper {
+        z-index: 60;
+        padding-left: 30px;
+        width: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

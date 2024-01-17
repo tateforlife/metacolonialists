@@ -1,0 +1,59 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
+
+  &__roadmap {
+    background-image: linear-gradient(to right, rgba(0, 0,0, 0.8) , transparent, rgba(0, 0, 0, 0.8)), url('https://opengameart.org/sites/default/files/seamless%20space_0.PNG');
+    width: 100%;
+
+    &-main-heading {
+      color: white;
+      font-size: 70px;
+      text-align: center;
+      margin: 50px 0 0;
+
+      @include tablet {
+        font-size: 48px;
+      }
+  
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+
+    &-heading {
+      font-weight: 800;
+      font-size: 54px;
+      color: white;
+      max-width: 600px;
+      margin: 100px 0 0;
+    }
+
+    &-step {
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+
+      &--right {
+        margin-left: auto;
+      }
+    }
+
+    &-text {
+      color: white;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: justify;
+    }
+
+    &-steps {
+      margin: 0 auto;
+      max-width: 1260px;;
+      width: 100%;
+    }
+  }
+}
